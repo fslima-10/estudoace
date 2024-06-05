@@ -1,0 +1,21 @@
+{
+    "PrimeCustomer": [
+		{
+            "ID": "434",
+            "Amount": "5600",
+            "paymentType": "netbanking"
+        }, {
+            "ID": "435",
+            "Amount": "4580",
+            "paymentType": "card"
+        }, {
+            "ID": "436",
+            "Amount": "2000",
+            "paymentType": "netbanking"
+        }, {
+            "ID": "437",
+            "Amount": "5000",
+            "paymentType": "card"
+        }
+    ]
+}

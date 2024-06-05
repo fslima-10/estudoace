@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="br.com.file" version="8.0.5.0" xmlns:map="br.com.file">
+    <input path="mbsharedlib://CSV_AULA30_CSV_TO_PIPED/BillDetails.xsd"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/SOAPDomainMsg.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="File_Mapping">
+        <input path="mb:msg(BillDetailsData,assembly,DFDL,Properties)" var="MessageAssembly"/>
+        <output path="mb:msg(SOAP_Domain_Msg,assembly,SOAP,Properties)" var="MessageAssembly2"/>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$MessageAssembly2/Properties"/>
+        </move>
+        <local>
+            <input path="$MessageAssembly/BillDetailsData"/>
+            <output path="$MessageAssembly2/SOAP_Domain_Msg"/>
+            <function ref="substring">
+                <input path="record/BillNumber" var="BillNumber"/>
+                <output path="Body/@anyAttribute"/>
+            </function>
+            <move>
+                <input path="record/BillDate"/>
+                <output path="Body/any"/>
+            </move>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

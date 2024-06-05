@@ -1,0 +1,45 @@
+BROKER SCHEMA br.com.file
+
+
+CREATE COMPUTE MODULE File_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+	     
+		
+		DECLARE OPEN_FILE CHARACTER;
+		SET OPEN_FILE = CAST(OutputRoot.BLOB.BLOB AS CHARACTER CCSID 1208); 
+	
+	    SET OutputRoot.Properties.MessageSet = '{CSV_AULA30_CSV_TO_PIPED}';
+	    SET OutputRoot.Properties.MessageType = '{}:BillDetailsData';
+	     
+	     
+	    	     
+	   --  SET csvBlob = OutputRoot.BLOB.BLOB;
+	     --ESSAS DUAS LINHAS TEM O MESMO RESULTADO, PEGA UM VALOR BLOB E CONVERTE PARA TEXTO.
+	     --SET csv = CAST(csvBlob AS CHAR CCSID InputRoot.Properties.CodedCharSetId);
+	     SET OPEN_FILE = CAST(OutputRoot.BLOB.BLOB AS CHARACTER CCSID 1208); 
+			
+			
+		
+	
+		 
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

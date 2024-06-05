@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="com.nkp.training" version="8.0.5.0" xmlns:map="com.nkp.training">
+    <input path="mbsharedlib://cobolMessageModelling/Bill.xsd"/>
+    <output path="mbsharedlib://CSVMessageModelling/BillInfoDetails.xsd"/>
+    <namespaces>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="cobol_2_csv_Mapping">
+        <input path="mb:msg(BILL,assembly,DFDL,Properties)" var="ComIbmMessageAssembly_BILL"/>
+        <output path="mb:msg(BillInfoDetailsData,assembly,DFDL,Properties)" var="ComIbmMessageAssembly_BillInfoDetailsData"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_BILL/Properties"/>
+            <output path="$ComIbmMessageAssembly_BillInfoDetailsData/Properties"/>
+            <override>
+                <assign value="{CSVMessageModelling}">
+                    <output path="$ComIbmMessageAssembly_BillInfoDetailsData/Properties/MessageSet"/>
+                </assign>
+                <assign value="{}:BillInfoDetailsData">
+                    <output path="$ComIbmMessageAssembly_BillInfoDetailsData/Properties/MessageType"/>
+                </assign>
+            </override>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_BILL/BILL/BillNumber"/>
+            <output path="$ComIbmMessageAssembly_BillInfoDetailsData/BillInfoDetailsData/record/InvoiceNumber"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_BILL/BILL/BillDate"/>
+            <output path="$ComIbmMessageAssembly_BillInfoDetailsData/BillInfoDetailsData/record/InvoiceDate"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_BILL/BILL/CachierId"/>
+            <output path="$ComIbmMessageAssembly_BillInfoDetailsData/BillInfoDetailsData/record/CashierName"/>
+        </move>
+        <function ref="fn:concat">
+            <input path="$ComIbmMessageAssembly_BILL/BILL/CUSTLastName" var="CUSTLastName"/>
+            <input path="$ComIbmMessageAssembly_BILL/BILL/CUSTFirstName" var="CUSTFirstName"/>
+            <output path="$ComIbmMessageAssembly_BillInfoDetailsData/BillInfoDetailsData/record/CustomerName"/>
+            <param name="string1" value="$CUSTFirstName"/>
+            <param name="string2" value="$CUSTLastName"/>
+        </function>
+        <move>
+            <input path="$ComIbmMessageAssembly_BILL/BILL/Mobile"/>
+            <output path="$ComIbmMessageAssembly_BillInfoDetailsData/BillInfoDetailsData/record/Customer_Phone"/>
+        </move>
+        <foreach>
+            <input path="$ComIbmMessageAssembly_BILL/BILL/Purchase"/>
+            <output path="$ComIbmMessageAssembly_BillInfoDetailsData/BillInfoDetailsData/record/cart"/>
+            <move>
+                <input path="Category"/>
+                <output path="Category"/>
+            </move>
+            <move>
+                <input path="ProductName"/>
+                <output path="ProductName"/>
+            </move>
+            <move>
+                <input path="UnitPrice"/>
+                <output path="UnitPrice"/>
+            </move>
+            <move>
+                <input path="Quantity"/>
+                <output path="Quantity"/>
+            </move>
+        </foreach>
+    </mappingDeclaration>
+</mappingRoot>

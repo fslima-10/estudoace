@@ -1,0 +1,3 @@
+InvoiceNumber,InvoiceDate,CashierName,CustomerName,Customer_Phone,( Category,ProductName,UnitPrice,Quantity ) -> repeating elements(1 to 10)
+
+67654,20-05-2022,c12345,NaikPrashant,7483824106,mobile,apple10,7888,1,mobile,samsung,6000,2,mobile,oneplus,8000,2

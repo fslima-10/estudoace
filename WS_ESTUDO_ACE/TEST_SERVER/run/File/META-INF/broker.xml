@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="C:\Broker\ESTUDO-ACE\WS_ESTUDO_ACE\GeneratedBarFiles\Fileproject.generated.bar" deployTimestamp="2024-06-05 17:05:36">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="br.com.file.File" deployBarfile="C:\Broker\ESTUDO-ACE\WS_ESTUDO_ACE\GeneratedBarFiles\Fileproject.generated.bar" deployTimestamp="2024-06-05 17:05:36">
+    <ConfigurableProperty uri="br.com.file.File#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.componentLevel">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.customDelimiter">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.excludePattern">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.fileFtp">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.fileFtpDirectory">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.fileFtpServer">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.fileFtpUser">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.filenamePattern" override="BillInfo.json">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.inputDirectory" override="C:\Broker\ESTUDO-ACE\Aula_32_JSON_to_CSV">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.longRetryInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.messageCodedCharSetIdProperty">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.messageEncodingProperty">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.recursiveDirectories">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.remoteTransferType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.retryThreshold">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.shortRetryInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Input.waitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.customDelimiter">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.fileFtp">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.fileFtpDirectory">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.fileFtpServer">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.fileFtpUser">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.outputDirectory" override="C:\Broker\ESTUDO-ACE\Aula_32_JSON_to_CSV\FileOutput">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.outputFilename" override="output.csv">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.recordDelimiter">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.remoteTransferType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.requestDirectoryLocation">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.requestNameLocation">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Output.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.customDelimiter">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.deleteRemoteFileOnTransfer">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.fileFtp">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.fileFtpDirectory">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.fileFtpServer">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.fileFtpUser">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.filenamePattern" override="output.csv">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.inputDirectory" override="C:\Broker\ESTUDO-ACE\ReadFile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.messageCodedCharSetIdProperty">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.messageEncodingProperty">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.recordDelimiter">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.remoteTransferType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#File Read.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Input.URLSpecifier" override="/readFile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.URLSpecifier" override="http://localhost:7800/json_to_csv">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.acceptCompressedResponses">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.allowedCiphers">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.enableCRLCheck">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.enableKeepAlive">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.hostnameChecking">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.httpProxyLocation">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.httpVersion" override="1.1">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.keyAlias">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.protocol" override="TLS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.requestCompressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.timeoutForServer">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#HTTP Request.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="br.com.file.File#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>

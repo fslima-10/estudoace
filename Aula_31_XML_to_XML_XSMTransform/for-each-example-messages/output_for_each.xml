@@ -1,0 +1,22 @@
+<PrimeCustomer>
+   <customer>
+      <ID>434</ID>
+      <Amount>5600</Amount>
+      <paymentType>netbanking</paymentType>
+   </customer>
+   <customer>
+      <ID>435</ID>
+      <Amount>4580</Amount>
+      <paymentType>card</paymentType>
+   </customer>
+   <customer>
+      <ID>436</ID>
+      <Amount>2000</Amount>
+      <paymentType>netbanking</paymentType>
+   </customer>
+   <customer>
+      <ID>437</ID>
+      <Amount>5000</Amount>
+      <paymentType>card</paymentType>
+   </customer>
+</PrimeCustomer>

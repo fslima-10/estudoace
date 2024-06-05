@@ -1,0 +1,52 @@
+{
+   "BillNumber": "8888",
+   "BillDate": "2022-02-23",
+   "BillTime": "10:36:55.03",
+   "BillerDetails": {
+      "@code": "9836",
+      "@name": "string",
+      "#text": "Jane"
+   },
+   "Customer": {
+      "Name": "Prashant",
+      "DOB": "1985-02-24",
+      "Phone": "7483824106",
+      "Mail": "nkptech@gmail.com",
+      "Address": {
+         "Street_Addr1": "Bay area",
+         "Street_Addr2": "5th cross",
+         "PostCode": "A84HJK",
+         "Country": "USA"
+      }
+   },
+   "paymentDetails": {
+      "paymentType": "CARD"
+   },
+   "CartItems": [
+      {
+         "ProductName": {
+            "@Category": "Cooking",
+            "#text": "OVEN"
+         },
+         "UnitPrice": "200",
+         "Quantity": "1"
+      },
+      {
+         "ProductName": {
+            "@Category": "Book",
+            "#text": "The Intelligent Investor"
+         },
+         "UnitPrice": "650",
+         "Quantity": "2"
+      },
+      {
+         "ProductName": {
+            "@Category": "Mobile",
+            "#text": "Apple"
+         },
+         "UnitPrice": "800",
+         "Quantity": "4"
+      }
+      
+   ]
+}

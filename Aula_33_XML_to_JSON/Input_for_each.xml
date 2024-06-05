@@ -1,0 +1,18 @@
+<shoppingCart>
+	<Customer ID="434">
+	<amount>5600</amount>
+	<paymentType>netbanking</paymentType>
+	</Customer>
+	<Customer ID="435">
+	<amount>4580</amount>
+	<paymentType>card</paymentType>
+	</Customer>
+	<Customer ID="436">
+	<amount>2000</amount>
+	<paymentType>netbanking</paymentType>
+	</Customer>
+	<Customer ID="437">
+	<amount>5000</amount>
+	<paymentType>card</paymentType>
+	</Customer>
+</shoppingCart>
